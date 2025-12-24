@@ -17,8 +17,20 @@
   </style>
 </head>
 <body>
-  you were not supposed to find me
+  <div id="msg"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const msg = document.getElementById("msg");
+
+    if (params.has("help")) {
+      msg.innerText = "no one helped me";
+    } else {
+      msg.innerText = "you were not supposed to find me";
+    }
+  </script>
 
   <!-- try again -->
+
 </body>
 </html>
