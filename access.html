@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>access</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="msg"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const msg = document.getElementById("msg");
+
+    if (params.get("key") === "0407") {
+      msg.innerText = "you remembered";
+    } else {
+      msg.innerText = "access denied";
+    }
+  </script>
+
+  <!-- dates matter -->
+</body>
+</html>
